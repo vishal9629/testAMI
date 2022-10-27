@@ -57,7 +57,7 @@ source "amazon-ebs" "ubuntu" {
 }
 
 build {
-  sources = ["source.azure-arm.build_vhd"]
+  sources = ["sources.amazon-ebs.ubuntu"]
 
   provisioner "shell" {
     execute_command = "sudo sh -c '{{ .Vars }} {{ .Path }}'"
