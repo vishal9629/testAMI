@@ -1,0 +1,22 @@
+name: Run packer build on a template file
+
+on:
+  push:
+    branches:
+        - 'main'
+jobs:
+  packer_build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Initialize Packer Template
+        run:  cd images/linux && packer init .
+      - name: Packer validate
+        run : cd images/linux && packer validate .
+      - name: Packer build
+        run : cd images/linux && packer build ubuntu2204.pkr.hcl
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ap-south-1
+      
