@@ -45,9 +45,9 @@ variable "run_validation_diskspace" {
 }
 source "amazon-ebs" "ubuntu" {
   ami_name      = "learn-packer-linux-aws"
-  source_ami    = "ami-01a6b08324a93c88a"
-  instance_type = "t2.micro"
-  region        = "ap-south-1"
+  source_ami    = "ami-096800910c1b781ba"
+  instance_type = "t2.2xlarge"
+  region        = "eu-west-1"
   ssh_username  = "ubuntu"
   launch_block_device_mappings {
     device_name = "/dev/sda1"
