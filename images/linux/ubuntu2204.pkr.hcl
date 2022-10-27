@@ -52,7 +52,7 @@ source "amazon-ebs" "ubuntu" {
   launch_block_device_mappings {
     device_name = "/dev/sda1"
     encrypted = false
-    volume_size = "50"
+    volume_size = "100"
 }
 }
 
