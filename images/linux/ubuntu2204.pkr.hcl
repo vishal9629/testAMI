@@ -56,6 +56,7 @@ source "amazon-ebs" "ubuntu" {
 }
 }
 
+
 build {
   sources = ["sources.amazon-ebs.ubuntu"]
 
