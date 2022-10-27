@@ -1,4 +1,3 @@
-
 variable "dockerhub_login" {
   type    = string
   default = "${env("DOCKERHUB_LOGIN")}"
