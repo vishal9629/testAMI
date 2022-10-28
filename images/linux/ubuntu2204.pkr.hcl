@@ -49,8 +49,8 @@ source "amazon-ebs" "ubuntu" {
   instance_type = "t2.2xlarge"
   region        = "eu-west-1"
   ssh_username  = "ubuntu"
-  AWS_MAX_ATTEMPTS: 400
-  AWS_POLL_DELAY_SECONDS: 20
+  AWS_MAX_ATTEMPTS= "400"
+  AWS_POLL_DELAY_SECONDS= "20"
   launch_block_device_mappings {
     device_name = "/dev/sda1"
     encrypted = false
