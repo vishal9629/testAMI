@@ -45,7 +45,7 @@ variable "run_validation_diskspace" {
 }
 source "amazon-ebs" "ubuntu" {
   ami_name      = "learn-packer-linux-aws"
-  source_ami    = "ami-096800910c1b781ba"
+  source_ami    = "ami-01a6b08324a93c88a"
   instance_type = "t2.2xlarge"
   region        = "ap-south-1"
   ssh_username  = "ubuntu"
