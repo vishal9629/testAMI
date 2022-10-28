@@ -47,7 +47,7 @@ source "amazon-ebs" "ubuntu" {
   ami_name      = "learn-packer-linux-aws"
   source_ami    = "ami-096800910c1b781ba"
   instance_type = "t2.2xlarge"
-  region        = "eu-west-1"
+  region        = "ap-south-1"
   ssh_username  = "ubuntu"
   aws_polling {
   delay_seconds = 20
